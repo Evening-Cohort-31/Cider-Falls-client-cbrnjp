@@ -19,3 +19,15 @@ export const createParkAreasHTML = () => {
         </div>`)
     .join('')
 }
+
+
+document.addEventListener(
+    "click",
+    (ClickEvent) => {
+        const cardClicked = ClickEvent.target
+        const button = ClickEvent.target.closest(".services--button");
+        if (button){
+            window.alert(`The services offered here are ${button.dataset.services}`)
+        }
+    }
+)

@@ -19,26 +19,6 @@
     padding: 10px;
 }
 
-/* ---------- Guest List ---------- */
-.guest-list ul {
-    list-style: none; /* remove bullets */
-    padding: 0;
-    margin: 0 0 10px 0; /* spacing between guests */
-}
-
-.guest-list li {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 6px 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-.guest-list li:hover {
-    background-color: #d9f0ff;
-}
-
 
 
 /* ---------- Park Cards Grid ---------- */
