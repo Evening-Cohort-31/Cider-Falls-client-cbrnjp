@@ -68,7 +68,7 @@ header h1 {
 /* ---------- Guest List Styling ---------- */
 .guest--list {
     background-color: #f0f8ff; /* light blue for contrast */
-    border: 1px solid #ccc;
+    border: 1px solid #041907;
     border-radius: 8px;
     padding: 10px;
     max-height: 80vh; /* prevent it from overflowing the screen */

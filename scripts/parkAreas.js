@@ -1,7 +1,7 @@
 //create function to assemble park area cards
 // event listener for clicking on park Title (the req says only the title!)
 
-import { getParkAreas } from "./database.js";
+import { getGuests, getParkAreas } from "./database.js";
 
 
 const parkAreasArray = getParkAreas()
@@ -9,7 +9,9 @@ const parkAreasArray = getParkAreas()
 export const createParkAreasHTML = () => {
     return parkAreasArray.map(park =>
         `<div class ="park--card">
-            <h3>${park.name}</h3>
+            <h3 data-type= "title"
+                data-id="${park.id}">
+                ${park.name}</h3>
             <img src= "${park.image}" alt="${park.name} image" class="park__image">
                 <div class= "services--button"
                     data-services= "${park.services}"
@@ -47,3 +49,20 @@ document.addEventListener(
 //     }
 // )
 
+
+document.addEventListener(
+    "click",
+    (NewClickEvent) => {
+        const titleClicked = NewClickEvent.target
+        const guests = getGuests()
+        if (titleClicked.dataset.type === "title"){
+            let guestCounter = 0
+            for (const guest of guests){
+                if (guest.parkAreaId === parseInt(titleClicked.dataset.id)){
+                    guestCounter++
+                }
+            }
+            window.alert(`There are ${guestCounter} guests in this area`)
+        }
+    }
+)
