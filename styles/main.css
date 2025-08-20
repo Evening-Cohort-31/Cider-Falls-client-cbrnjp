@@ -37,6 +37,14 @@ header h1 {
     padding: 10px;
 }
 
+.park--card h3 {
+     cursor: pointer;
+}
+
+.park--card h3:hover {
+  background-color: #cbd517; /* darker green on hover */
+}
+
 /* ---------- Park Card Images ---------- */
 .park__image {
     width: 100%;        /* fill the card width */
