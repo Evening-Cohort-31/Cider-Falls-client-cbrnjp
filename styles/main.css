@@ -1,0 +1,88 @@
+/* ---------- Header Styling ---------- */
+header h1 {
+    text-align: center;          /* center the text */
+    font-family: 'Cursive', 'Comic Sans MS', sans-serif; /* campy / playful */
+    font-size: 3rem;             /* bigger, prominent */
+    color: #2c5f2d;              /* forest green color */
+    text-shadow: 2px 2px 4px #a0d0a0; /* subtle shadow for depth */
+    margin-bottom: 20px;
+}
+
+
+/* ---------- Park Card Styling ---------- */
+.park--card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: 'Chewy', bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ---------- Park Card Images ---------- */
+.park__image {
+    width: 100%;        /* fill the card width */
+    height: 150px;      /* uniform height for all images */
+    object-fit: cover;  /* crop nicely without stretching */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* ---------- Services Button Styling ---------- */
+.services--button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.services--button h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+/* ---------- Guest List Styling ---------- */
+.guest--list {
+    background-color: #f0f8ff; /* light blue for contrast */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    max-height: 80vh; /* prevent it from overflowing the screen */
+    overflow-y: auto; /* scroll if too many guests */
+    
+}
+
+.guest--list h3 {
+    font-family: 'Cursive', 'Comic Sans MS', sans-serif; /* campy / playful */
+    color: #2c5f2d; /* forest green for consistency */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.guest--list ul {
+    list-style: none; /* remove bullets */
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.guest--list li {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+}

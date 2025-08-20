@@ -4,13 +4,13 @@
 import { getParkAreas } from "./database.js";
 
 
-const parkAreasArray = getParkAreas
+const parkAreasArray = getParkAreas()
 
 export const createParkAreasHTML = () => {
-    parkAreasArray.map(park =>
+    return parkAreasArray.map(park =>
         `<div class ="park--card">
             <h3>${park.name}</h3>
-            <img src= "${park.image}" alt="${park.name} image" class="park__image"></img>
+            <img src= "${park.image}" alt="${park.name} image" class="park__image">
                 <div class= "services--button"
                     data-services= "${park.services}"
                     data-type="services-button">

@@ -3,4 +3,15 @@
 import { getGuests } from "./database.js";
 
 
-test = getGuests()
+const guestsArray = getGuests()
+
+export const createGuestListHTML = () => {
+    return guestsArray.map (guest =>
+            `<ul>
+                <li data-id="${guest.id}">
+                    ${guest.name}
+                </li>
+            </ul>`
+    )
+    .join('')
+}

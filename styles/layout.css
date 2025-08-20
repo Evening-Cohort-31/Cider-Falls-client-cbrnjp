@@ -1,0 +1,83 @@
+/* ---------- Layout ---------- */
+.main-content {
+    display: flex;
+    gap: 20px; /* spacing between left and right */
+    padding: 20px;
+}
+
+/* Left container: 5/8ths */
+.left-container {
+    flex: 5;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+/* Right container: 3/8ths */
+.right-container {
+    flex: 3;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+/* ---------- Guest List ---------- */
+.guest-list ul {
+    list-style: none; /* remove bullets */
+    padding: 0;
+    margin: 0 0 10px 0; /* spacing between guests */
+}
+
+.guest-list li {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.guest-list li:hover {
+    background-color: #d9f0ff;
+}
+
+
+
+/* ---------- Park Cards Grid ---------- */
+.parkAreas--section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;
+    padding: 10px 0;
+}
+
+
+
+/* ---------- Bottom Section ---------- */
+.bottom-content {
+    display: flex;
+    flex-wrap: wrap;             /* allow columns to wrap on smaller screens */
+    justify-content: space-between; /* space between columns */
+    background-color: #2c5f2d;   /* forest green for camp theme */
+    color: #ffffff;              /* text color white */
+    padding: 30px 20px;
+    gap: 20px;                   /* spacing between columns */
+}
+
+/* Each column */
+.bottom-content > div {
+    flex: 1 1 200px; /* grow, shrink, min width 200px */
+    min-width: 200px;
+}
+
+/* Column headings */
+.bottom-content h2,
+.bottom-content h3 {
+    font-family: 'Fredoka One', cursive; /* campy font */
+    margin-bottom: 10px;
+}
+
+/* Column text */
+.bottom-content p {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
