@@ -8,14 +8,14 @@
 /* Left container: 5/8ths */
 .left-container {
     flex: 5;
-    background-color: #f5f5f5;
+    background-color: #fdf6e3;
     padding: 10px;
 }
 
 /* Right container: 3/8ths */
 .right-container {
     flex: 3;
-    background-color: #e0e0e0;
+    background-color: #fdf6e3;
     padding: 10px;
 }
 

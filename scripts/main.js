@@ -9,6 +9,7 @@ const mainContainer = document.querySelector("#container")
 
 const applicationHTML = 
         `<header>
+            <img src= "./styles/ChatGPT Image Aug 19, 2025, 08_33_02 PM.png" alt="" class="logo__image">
             <h1>Cider Falls Park</h1>
         </header>
         <div class = "main-content">
