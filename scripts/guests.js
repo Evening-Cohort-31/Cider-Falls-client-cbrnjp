@@ -5,11 +5,11 @@ import { getGuests } from "./database.js"
 const guests = getGuests()
 
 // Defines and exports a function named Guests, which When called will go through the array (getGuests) and add each guest object found in the array in an unordered list
-export const Guests = () => {
+export const currentGuest = () => {
     let guestHTML = "<ul>"
 
     for (const guest of guests) {
-        guestHTML += `<li>${guest.name}</li>`
+        guestHTML += `<li data-parkId=‘${guest.id}' data-type=‘guestList’>${guest.name}</li>`
     }
 
     guestHTML += "</ul>"
