@@ -37,6 +37,7 @@ header h1 {
     padding: 10px;
 }
 
+        /* Park name clickable styling */
 .park--card h3 {
      cursor: pointer;
 }
@@ -106,4 +107,17 @@ header h1 {
     font-family: 'Baloo 2', cursive;
     font-size: 1rem;
     transition: background-color 0.2s, transform 0.1s;
+}
+
+
+
+
+/* Service List clickable styling */
+
+.service-item {
+     cursor: pointer;
+}
+
+.service-item:hover {
+  background-color: #cbd517; /* darker green on hover */
 }
