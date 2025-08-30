@@ -62,7 +62,62 @@ const database = {
     { id: 19, name: "Gary Gearbox", parkAreaId: 2 },
     { id: 20, name: "Fernie Campwell", parkAreaId: 1 },
   ],
-};
+  services: [ {
+    id: 1,
+    name: "hiking", 
+    parkAreaId: [2, 4, 6]
+  }, {
+    id: 2, 
+    name: "picnicking",
+    parkAreaId: [1, 2, 6]
+
+  }, {
+    id: 3,
+    name: "rock climbing",
+    parkAreaId: [2]
+  }, {
+    id: 4,
+    name: "parking",
+    parkAreaId: [1, 5]
+  }, {
+    id: 5,
+    name: "zip lining",
+    parkAreaId: [6]
+  }, {
+    id: 6,
+    name: "lodging",
+    parkAreaId: [1, 5]
+  }, {
+    id: 7,
+    name: "information",
+    parkAreaId: [1, 5]
+  }, {
+    id: 8, 
+    name: "rafting",
+    parkAreaId: [3]
+  }, {
+    id: 9,
+    name: "canoeing",
+    parkAreaId: [3]
+  }, {
+    id: 10,
+    name: "fishing",
+    parkAreaId: [3, 4]
+  }, {
+    id: 11, 
+    name: "campgrounds",
+    parkAreaId: [5]
+  }, {
+    id: 12, 
+    name: "office park",
+    parkAreaId: [5]
+  }, {
+    id: 13, 
+    name: "play area",
+    parkAreaId: [5]
+  }
+]
+}
 
 export const getParkAreas = () => {
   const parkAreasArray = structuredClone(database.parkAreas);
@@ -73,3 +128,8 @@ export const getGuests = () => {
   const guestsArray = structuredClone(database.guests);
   return guestsArray;
 };
+
+export const getServices = () => {
+  const servicesArray = structuredClone(database.services)
+  return servicesArray
+}

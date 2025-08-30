@@ -4,6 +4,7 @@
 
 import { createGuestListHTML } from "./guests.js"
 import { createParkAreasHTML } from "./parkAreas.js"
+import { createServicesBulletHTML } from "./services.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -12,6 +13,12 @@ const applicationHTML =
             <img src= "./styles/ChatGPT Image Aug 19, 2025, 08_33_02 PM.png" alt="" class="logo__image">
             <h1>Cider Falls Park</h1>
         </header>
+        <div class = "top-section">
+            <div class = "services-list">
+                ${createServicesBulletHTML()}
+            </div>
+        </div>
+
         <div class = "main-content">
             <div class="left-container">
                 <div class="parkAreas--section">
