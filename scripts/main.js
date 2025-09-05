@@ -49,7 +49,7 @@ mainContainer.innerHTML = applicationHTML
 
 mainContainer.addEventListener("click", (event) => {
     if (event.target.dataset.type === 'parkArea') {
-        const areaId = parseInt(event.target.dataset.parkid) // Changed to lowercase
+        const areaId = parseInt(event.target.dataset.parkid)
         const guestCount = getGuestCountByArea(areaId)
         
         console.log("Clicked area ID:", areaId)
