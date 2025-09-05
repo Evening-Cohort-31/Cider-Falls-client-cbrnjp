@@ -1,21 +1,37 @@
-// Pulls in a function called getGuests from database.js
+// Add this to guests.js
 import { getGuests } from "./database.js"
 
-// Runs the getGuests function and Stores the returned array of guest objects in the variable guests
 const guests = getGuests()
 
-// Defines and exports a function named Guests, which When called will go through the array (getGuests) and add each guest object found in the array in an unordered list
-export const currentGuest = () => {
-    let guestHTML = "<ul>"
-
-    for (const guest of guests) {
-        guestHTML += `<li data-parkId=‘${guest.id}' data-type=‘guestList’>${guest.name}</li>`
-    }
-
-    guestHTML += "</ul>"
-    return guestHTML
-
+export const getGuestCountByArea = (parkAreaId) => {
+    return guests.filter(guest => guest.parkAreaId === parkAreaId).length
 }
 
+export const currentGuest = () => {
+    let guestHTML = "<ul>"
+    
+    for (const guest of guests) {
+        guestHTML += `<li data-parkId='${guest.id}' data-type='guestList'>${guest.name}</li>`
+    }
+    
+    guestHTML += "</ul>"
+    return guestHTML
+}
 
-// will need following on main.js:  import { Guests } from "./guests.js"
+// Update parkAreas.js - add data attributes to titles
+export const park = () => {
+    let parkHTML = ""
+    
+    for (const area of parkAreas) {
+        parkHTML += `
+            <div class="park-area">
+                <h3 data-area-id="${area.id}" class="area-title">
+                    ${area.name}
+                </h3>
+                <img src="${area.image}" alt="${area.name}">
+            </div>
+        `
+    }
+    
+    return parkHTML
+}
