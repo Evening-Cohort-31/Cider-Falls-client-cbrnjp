@@ -1,5 +1,5 @@
 import { park } from "./parkAreas.js"
-import { currentGuest } from "./guests.js"
+import { currentGuest, getGuestCountByArea } from "./guests.js"
 import { getServices } from "./database.js"
 
 const mainContainer = document.querySelector("#container")
@@ -65,3 +65,16 @@ const applicationHTML = `
 
 
 mainContainer.innerHTML = applicationHTML
+
+mainContainer.addEventListener("click", (event) => {
+    if (event.target.dataset.type === 'parkArea') {
+        const areaId = parseInt(event.target.dataset.parkid)
+        const guestCount = getGuestCountByArea(areaId)
+        
+        console.log("Clicked area ID:", areaId)
+        console.log("Guest count:", guestCount)
+        
+        alert(`Current guests: ${guestCount}`)
+    }
+})
+
